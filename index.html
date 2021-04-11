@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz: Front End Development</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="coverPage" id="coverPage">
+        <h1>Coding Quiz: Front End Development</h1>
+        <h2>Instructions: </h2>
+
+        <ul>
+            <li>5 Questions Total</li>
+            <li>60 Seconds Total</li>
+            <li>50 Points Total</li>
+            <li>Random Questions (HTML, CSS and JavaScript)</li>
+        </ul>
+
+        <button id="startBtn">Start the Quiz!</button>
+    </section>
+    
+    <div class="quizBox" id="questionBox">
+        <section class="tracker">
+            <div class="timeCount">Timer: <span id="timeCount">0</span></div>
+            <div class="scoreCount">Score: <span id ="scoreCount">0</span></div>
+        </section>
+    
+        <section class="quizQuestion" id="quizQuestions">
+            
+        </section>
+
+        <section class="ansChoices" id=""ansChoices>
+            <ul>
+            </ul>
+        </section>
+
+    </div>
+
+    <section id="finalResult" class="resultHidden">
+        <p id="scoreResult">Final Score: <span id="finalScore">0</span></p>
+        <div id="intialContent">
+            <label id="initials">Your Initials: </label>
+            <input type="text" id="initials" name="initials">
+            <button type ="submit button" id="submitBtn">Submit</button>
+        </div>
+    </section>
+
+    <section id="highScore" class="highScoreHidden">
+        <h1>High scores</h1>
+        <input type="text" id="show-high-result" name="show-high-result">
+        <button type="start again" id="startAgain">Start Again</button>
+    </section>
+
+</body>
+
+    <script src="script.js"></script>
+</html>
