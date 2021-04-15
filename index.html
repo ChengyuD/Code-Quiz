@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz: Front End Development</title>
     <link rel="stylesheet" href="style.css">
+    <title>Coding Quiz</title>
 </head>
 
 <body>
+<div class="quizBox" id="questionBox">  
+    <section class="tracker">
+        <div class="timeCount">Timer: <span id="timeCount">0</span></div>
+        <div class="scoreCount">Score: <span id ="scoreCount">0</span></div>
+    </section>
+    
     <section class="coverPage" id="coverPage">
         <h1>Coding Quiz: Front End Development</h1>
         <h2>Instructions: </h2>
@@ -22,40 +29,31 @@
 
         <button id="startBtn">Start the Quiz!</button>
     </section>
-    
-    <div class="quizBox" id="questionBox">
-        <section class="tracker">
-            <div class="timeCount">Timer: <span id="timeCount">0</span></div>
-            <div class="scoreCount">Score: <span id ="scoreCount">0</span></div>
-        </section>
-    
-        <section class="quizQuestion" id="quizQuestions">
+</div>
             
-        </section>
-
-        <section class="ansChoices" id=""ansChoices>
-            <ul>
-            </ul>
-        </section>
-
-    </div>
-
-    <section id="finalResult" class="resultHidden">
-        <p id="scoreResult">Final Score: <span id="finalScore">0</span></p>
-        <div id="intialContent">
-            <label id="initials">Your Initials: </label>
+<div class="quizSet" id="quizSet">
+    <h2 id="quizQuestion" class="quizQuestion"></h2>
+    <ul id="ansChoices" class="ansChoices"></ul>
+    <div id="choice-react" class="react"></div>
+</div>
+    
+<section id="quizEnd" class="quizEnd">
+        <p id="finalScore">Final Score: <span id="final-score"></span> </p>
+        <div class="initial-input">
+            <label for="initials">Your initials: </label>
             <input type="text" id="initials" name="initials">
-            <button type ="submit button" id="submitBtn">Submit</button>
+            <button type="submit" id="submitBtn">Submit</button>
         </div>
-    </section>
+</section>
+    
+<section id="scoreResult" class="highScore">
+    <input type="text" id="showResult" name="Show Result">
+    <button type="restart" id="restart">Start Again</button>
+    <button type="reset" id="reset">Clear Scores</button>
+</section>
 
-    <section id="highScore" class="highScoreHidden">
-        <h1>High scores</h1>
-        <input type="text" id="show-high-result" name="show-high-result">
-        <button type="start again" id="startAgain">Start Again</button>
-    </section>
+    <script src="script.js"></script>
 
 </body>
 
-    <script src="script.js"></script>
 </html>
