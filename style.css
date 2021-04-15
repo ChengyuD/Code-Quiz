@@ -115,13 +115,9 @@ body {
 }
 
 .ansChoices {
-    margin: 30px 5px;
-}
-
-.ansChoices ul {
     color: rgb(53, 51, 51);
     font-size: 15pt;
-    margin: 5px 20px;
+    margin: 30px 5px;
     padding: 5px auto;
     font-weight: bold;
     list-style-type: none;
@@ -129,12 +125,15 @@ body {
     justify-content: center;
 }
 
+/* styling quiz score page with initial input */
 #quizEnd {
-    width: 600px;
-    min-height: 350px;
+    width: 900px;
+    min-height: 500px;
     background-color: rgb(236, 216, 124);
     border-radius: 20px;
     padding: 5px 15px;
+    justify-content: center;
+    text-align: center;
 }
 
 #finalScore,
@@ -161,12 +160,15 @@ body {
     border-radius: 90px;
 }
 
+/* styling result page of local record */
 #scoreResult {
-    width: 600px;
-    min-height: 350px;
+    width: 900px;
+    min-height: 500px;
     background-color: rgb(236, 216, 124);
     border-radius: 20px;
     padding: 5px 15px;
+    justify-content: center;
+    text-align: center;
 }
 
 #restart {
@@ -181,12 +183,15 @@ body {
     border-radius: 90px;
 }
 
+.hidden {
+    display: none;
+}
+
 @media screen and (max-width: 760px) {
     .coverPage,
     .quizSet,
     .quizEnd,
     .scoreResult {
-        display: none;
         width: 425px;
     }
 }
