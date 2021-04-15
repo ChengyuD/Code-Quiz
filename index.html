@@ -6,52 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Coding Quiz</title>
+    <title>Coding Quiz: Front End Development</title>
 </head>
 
 <body>
-<div class="quizBox" id="questionBox">  
-    <section class="tracker">
-        <div class="timeCount">Timer: <span id="timeCount">0</span></div>
-        <div class="scoreCount">Score: <span id ="scoreCount">0</span></div>
-    </section>
-    
-    <section class="coverPage" id="coverPage">
-        <h1>Coding Quiz: Front End Development</h1>
-        <h2>Instructions: </h2>
+    <div class="quizBox" id="questionBox">
+        <section class="tracker">
+            <div class="timeCount">Timer: <span id="timeCount">0</span></div>
+            <div class="scoreCount">Score: <span id="scoreCount">0</span></div>
+        </section>
 
-        <ul>
-            <li>5 Questions Total</li>
-            <li>60 Seconds Total</li>
-            <li>50 Points Total</li>
-            <li>Random Questions (HTML, CSS and JavaScript)</li>
-        </ul>
+        <section class="coverPage" id="coverPage">
+            <h1>Coding Quiz: Front End Development</h1>
+            <h2>Instructions: </h2>
 
-        <button id="startBtn">Start the Quiz!</button>
-    </section>
-</div>
-            
-<div class="quizSet" id="quizSet">
-    <h2 id="quizQuestion" class="quizQuestion"></h2>
-    <ul id="ansChoices" class="ansChoices"></ul>
-    <div id="choice-react" class="react"></div>
-</div>
-    
-<section id="quizEnd" class="quizEnd">
-        <p id="finalScore">Final Score: <span id="final-score"></span> </p>
-        <div class="initial-input">
-            <label for="initials">Your initials: </label>
-            <input type="text" id="initials" name="initials">
-            <button type="submit" id="submitBtn">Submit</button>
+            <ul>
+                <li>5 Questions Total</li>
+                <li>60 Seconds Total</li>
+                <li>50 Points Total</li>
+                <li>Random Questions (HTML, CSS and JavaScript)</li>
+            </ul>
+
+            <button id="startBtn">Start the Quiz!</button>
+        </section>
+
+        <div class="quizSet hidden" id="quizSet">
+            <h2 id="quizQuestion" class="quizQuestion"></h2>
+            <ul id="ansChoices" class="ansChoices"></ul>
+            <div id="choice-react" class="react"></div>
         </div>
-</section>
-    
-<section id="scoreResult" class="highScore">
-    <input type="text" id="showResult" name="Show Result">
-    <button type="restart" id="restart">Start Again</button>
-    <button type="reset" id="reset">Clear Scores</button>
-</section>
 
+        <section id="quizEnd" class="quizEnd hidden">
+            <p id="finalScore">Final Score: <span id="final-score"></span> </p>
+            <div class="initial-input">
+                <label for="initials">Your initials: </label>
+                <input type="text" id="initials" name="initials">
+                <button type="submit" id="submitBtn">Submit</button>
+            </div>
+        </section>
+
+        <section id="scoreResult" class="highScore hidden">
+            <input type="text" id="showResult" name="Show Result">
+            <button type="restart" id="restart">Start Again</button>
+            <button type="reset" id="reset">Clear Scores</button>
+        </section>
+    </div>
     <script src="script.js"></script>
 
 </body>
