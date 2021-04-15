@@ -9,7 +9,7 @@ var quizSetEl = [{
         "the TITLE element goes inside the HEAD element.",
         "the TITLE element goes inside the BODY element.",
     ],
-    answer: "the TITLE element goes inside the HEAD element."
+    answer: 2
 },
 {
     question: "Which is the correct CSS syntax?",
@@ -19,7 +19,7 @@ var quizSetEl = [{
         "body:color=black",
         "{body:color=black(body}",
     ],
-    answer: "body {color: black}"  
+    answer: 0 
 },
 {
     question: "How does a 'for' loop start?",
@@ -29,7 +29,7 @@ var quizSetEl = [{
         "for (i = 0; i <= 5)",
         "for (i <= 5; i++)",
     ],
-    answer: "for (i = 0; i <= 5; i++)"
+    answer: 1
 },
 {
     question: "How do you call a function named 'myFunction'?",
@@ -39,7 +39,7 @@ var quizSetEl = [{
         "call myFunction()",
         "myFunction()",
     ],
-    answer: "myFunction()"
+    answer: 3
 },
 {
     question: "Inside which HTML element do we put the JavaScript?",
@@ -49,15 +49,18 @@ var quizSetEl = [{
         "<javascript>",
         "<js>",
     ],
-    answer: "<script>"
+    answer: 0
 },
 ];
 
-
+//cover page is showing first, while timer, score counter, quiz set, quiz end, and score result are hidden
 var coverPageEl = document.querySelector("#coverPage");
 var countDownEl = document.querySelector("#timeCount");
 var countDownTimer;
 
+
+//timer and score starts after clicking "start button", quiz set should also appear in order (from 1st to 5th questions)
+//total time = number of questions * 12
 function countDown() {
     var scoreCountEl = document.querySelector("#scoreCount");
     scoreCountEl.textContent = retreiveHighScore();
@@ -74,7 +77,6 @@ function countDown() {
     coverPageEl.classList.add("hidden");
     console.log("hidden")
     createQuiz();
-    console.log(createQuiz())
 }
 
 function retreiveHighScore() {
@@ -86,12 +88,14 @@ function retreiveHighScore() {
     } else return 0;
 }
 
+//retrieve quiz questions and answer options
+var quizSet = document.getElementById("quizSet");
 var quizQuestionEl = document.getElementById("quizQuestion");
 var quizAnswersEl = document.getElementById("ansChoices")
 var currentQuestionIndex = 0;
 
 function createQuiz() {
-    quizQuestionEl.classList.remove("hidden");
+    quizSet.classList.remove("hidden");
     var quizQuestion = quizSetEl[currentQuestionIndex].question;
     quizQuestionEl.textContent = quizQuestion;
     
@@ -184,7 +188,7 @@ var quizEndEl = document.getElementById("quizEnd");
 var submitButton = document.getElementById("submitBtn");
 
 function endQuiz() {
-    quizQuestionEl.classList.add("hidden");
+    quizSet.classList.add("hidden");
     quizEndEl.classList.remove("hidden");
     var finalScoreEl = document.getElementById("final-score");
     finalScoreEl.textContent = score;
@@ -217,10 +221,9 @@ function getInitials() {
         }
     }
     showScore();
-    console.log(showScore())
 }
 
-var highResultEl = document.getElementById("finalcore");
+var highResultEl = document.getElementById("scoreResult");
 
 function showScore() {
     quizEndEl.classList.add("hidden");
