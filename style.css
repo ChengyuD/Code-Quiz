@@ -108,17 +108,18 @@ body {
 
 .quizQuestion {
     color:rgb(39, 38, 38);
-    padding: 10px 15px;
+    padding: 15px 15px;
+    margin: 30px 10px;
     font-size: 27pt;
     font-weight: bold;
     text-align: center;
 }
 
 .ansChoices {
-    color: rgb(53, 51, 51);
-    font-size: 15pt;
-    margin: 30px 5px;
-    padding: 5px auto;
+    color: rgb(29, 28, 28);
+    font-size: 24pt;
+    margin: 50px 15px;
+    padding: 20px 10px;
     font-weight: bold;
     list-style-type: none;
     list-style-position: inside;
@@ -146,7 +147,7 @@ body {
     margin-bottom: 20px;
 }
 
-#initials {
+.quizEnd label {
     font-size: 18pt;
     color:rgb(39, 38, 38);
     margin-top: 20px;
@@ -154,10 +155,21 @@ body {
     font-weight: bold;
 }
 
+.quizEnd input {
+    font-size: 18pt;
+}
+
 #submitBtn {
     background-color:rgb(230, 150, 2);
     color: white;
     border-radius: 90px;
+    font-size: 12pt;
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    padding: 5px 5px;
+    margin: 30px 30px;
 }
 
 /* styling result page of local record */
@@ -171,16 +183,35 @@ body {
     text-align: center;
 }
 
+#showResult {
+    font-size: 18pt;
+    margin: 100px 300px 10px;
+}
+
 #restart {
     background-color:rgb(230, 150, 2);
     color: white;
     border-radius: 90px;
+    font-size: 12pt;
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    padding: 5px 5px;
+    margin: 30px 30px;
 }
 
 #reset {
     background-color:rgb(230, 150, 2);
     color: white;
     border-radius: 90px;
+    font-size: 12pt;
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    padding: 5px 5px;
+    margin: 30px 30px;
 }
 
 .hidden {
